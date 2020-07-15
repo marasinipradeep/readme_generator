@@ -1,6 +1,8 @@
 // function to generate markdown for README
 function generateMarkdown(data) {
-  return `# ${data.title}
+  return `
+  ![License badge](https://img.shields.io/badge/license-${data.license}-brightgreen)
+  # ${data.title}
   ${data.descriptions}
   
   ## Table of Contents
@@ -20,17 +22,21 @@ ${data.installations}
 ${data.usageDetails}
 
 ## License 
-![License badge](https://img.shields.io/badge/license-${data.license}-green)
 This project uses a ${data.license} license.
 
 ## Contribution
-\`\`\`${data.contribute}\`\`\`
+\`\`\`
+${data.contribute}
+\`\`\`
 
   ## Tests
-\`\`\`${data.tests}\`\`\`
+\`\`\`
+${data.tests}
+\`\`\`
 
 ## Questions
  Gihub username : <a href=${data.userName}>${data.userName}</a>
+
  Email Address : <a href=${data.email}>${data.email}</a>
   `;
 }
